@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Options from '../Options/Options';
 import slugify from 'slugify';
+import './Features.css';
 
 export default class Features extends Component {
     render () {
@@ -8,13 +9,13 @@ export default class Features extends Component {
             const itemHash = slugify(JSON.stringify(item))
             return (
                 <Options 
-                key={itemHash}
-                itemHash={itemHash} 
-                feature={this.props.feature} 
-                item={item} 
-                currencyFormat={this.props.currencyFormat}
-                selectedOptions={this.props.selectedOptions} 
-                updateOptions={this.props.updateOptions}
+                    key={itemHash}
+                    itemHash={itemHash} 
+                    feature={this.props.feature} 
+                    item={item} 
+                    currencyFormat={this.props.currencyFormat}
+                    selectedOptions={this.props.selectedOptions} 
+                    updateOptions={this.props.updateOptions}
                 />)
         })
 

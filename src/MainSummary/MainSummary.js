@@ -1,6 +1,7 @@
 import React from 'react';
 import SummaryTotal from '../SummaryTotal/SummaryTotal';
 import SummaryItem from '../SummaryItem/SummaryItem';
+import './MainSummary.css';
 
 export default function MainSummary(props) {
     const summary = Object.keys(props.selected).map((feature, idx) => {

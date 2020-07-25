@@ -1,4 +1,5 @@
 import React from 'react';
+import './SummaryItem.css'
 
 export default function SummaryItem(props) {
     return (

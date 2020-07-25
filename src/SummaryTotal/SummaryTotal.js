@@ -1,4 +1,5 @@
 import React from 'react';
+import './SummaryTotal.css';
 
 export default function SummaryTotal(props) {
     return (

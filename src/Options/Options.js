@@ -1,5 +1,6 @@
 import React from 'react';
 import slugify from 'slugify';
+import './Options.css';
 
 export default function Options(props) {
     return (

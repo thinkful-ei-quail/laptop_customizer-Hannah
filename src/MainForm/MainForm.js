@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Features from '../Features/Features'
+import './MainForm.css';
 
 export default class MainForm extends Component {
     render () {
@@ -7,13 +8,13 @@ export default class MainForm extends Component {
             const featureHash = feature + '-' + idx
             return (
                 <Features 
-                key={featureHash}
-                featureHash={featureHash} 
-                feature={feature} 
-                featuresList={this.props.featuresList} 
-                currencyFormat={this.props.currencyFormat}
-                selectedOptions={this.props.selectedOptions}
-                updateOptions={this.props.updateOptions}
+                    key={featureHash}
+                    featureHash={featureHash} 
+                    feature={feature} 
+                    featuresList={this.props.featuresList} 
+                    currencyFormat={this.props.currencyFormat}
+                    selectedOptions={this.props.selectedOptions}
+                    updateOptions={this.props.updateOptions}
                 />
             )})
             console.log(this.props.featuresList)
