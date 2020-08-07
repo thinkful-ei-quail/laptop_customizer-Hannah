@@ -1,23 +1,24 @@
 import React, { Component } from 'react';
-import Features from '../Features/Features'
+import Features from '../Features/Features';
+import FEATURES from '../FEATURES';
 import './MainForm.css';
 
 export default class MainForm extends Component {
     render () {
-        const features = Object.keys(this.props.featuresList).map((feature, idx) => {
+        const features = Object.keys(FEATURES).map((feature, idx) => {
             const featureHash = feature + '-' + idx
             return (
                 <Features 
                     key={featureHash}
                     featureHash={featureHash} 
                     feature={feature} 
-                    featuresList={this.props.featuresList} 
+                    featuresList={FEATURES} 
                     currencyFormat={this.props.currencyFormat}
                     selectedOptions={this.props.selectedOptions}
                     updateOptions={this.props.updateOptions}
                 />
             )})
-            console.log(this.props.featuresList)
+            console.log(FEATURES)
     
             
             return (

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import MainSummary from './MainSummary/MainSummary';
 import MainForm from './MainForm/MainForm';
+import Header from './Header/Header';
 import './App.css';
 
 //this object will allow us to
@@ -47,9 +48,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header>
-          <h1>ELF Computing | Laptops</h1>
-        </header>
+        <Header />
         <main>
           <MainForm 
             featuresList={this.props.features}

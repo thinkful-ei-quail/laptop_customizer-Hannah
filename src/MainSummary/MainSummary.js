@@ -9,6 +9,7 @@ export default function MainSummary(props) {
         const selectedOption = props.selected[feature];
         return (
           <SummaryItem 
+            key={idx}
             featureHash={featureHash}
             selected={selectedOption}
             feature={feature}
@@ -16,17 +17,12 @@ export default function MainSummary(props) {
         );
       });
 
-    const total = Object.keys(props.selected).reduce(
-        (acc, curr) => acc + props.selected[curr].cost,
-        0
-      );
-
     return (
         <section className="main__summary">
             <h2>Your cart</h2>
            {summary}
             <SummaryTotal
-              totalCost={total}
+              selected={props.selected}
               currencyFormat={props.currencyFormat} 
             />
         </section>
